@@ -13,7 +13,7 @@ services:
     #     - no_proxy
     volumes:
       - ./php/php.ini:/usr/local/etc/php/php.ini
-      - ./php/fpm.ini:/usr/local/etc/php/conf.d/fpm.ini
+      - ./php/fpm.conf:/usr/local/etc/php-fpm.d/zz-fpm.conf
       - ./php/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
       - ./php/web.ini:/usr/local/etc/php/conf.d/web.ini
       - ./php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
