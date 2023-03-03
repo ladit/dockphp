@@ -4,10 +4,11 @@ services:
 
   ### PHP ##############################################
   php:
-    image: ladit/php
+    image: ladit/php:${PHP_VERSION}-fpm-alpine
     # build:
     #   context: ./php
     #   args:
+    #     - PHP_VERSION=${PHP_VERSION}
     #     - http_proxy
     #     - https_proxy
     #     - no_proxy

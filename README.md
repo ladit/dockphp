@@ -1,12 +1,12 @@
 # dockphp
 
-a personalized docker image for php web development mainly, trimed down version of [laradock](https://github.com/laradock/laradock). It is based on php:8-fpm-alpine. no other php version supported for now.
+a personalized docker image for php web development mainly, trimed down version of [laradock](https://github.com/laradock/laradock). It is based on php:fpm-alpine. Latest php 7/8 is supported.
 
-- use alpine, size down to 128MB uncompressed
+- use alpine, size down to 155MB uncompressed
 - timezone: Asia/Shanghai
 - nginx with logrotate
 
-php modules:
+default php modules:
 
 ```
 [PHP Modules]
@@ -19,11 +19,14 @@ dom
 fileinfo
 filter
 ftp
+gd
+grpc
 hash
 iconv
 json
 libxml
 mbstring
+mcrypt
 mongodb
 mysqlnd
 openssl
@@ -33,6 +36,8 @@ pdo_mysql
 pdo_sqlite
 Phar
 posix
+protobuf
+random
 rdkafka
 readline
 redis
