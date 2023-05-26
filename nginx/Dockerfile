@@ -1,6 +1,6 @@
-FROM nginx:alpine
+FROM nginx
 
 RUN set -eux; \
-    apk --no-cache add tzdata logrotate; \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime; \
-    apk del tzdata;
+    apt-get update; \
+    apt-get install --no-install-recommends -y logrotate; \
+    rm -rf /var/lib/apt/lists/*
